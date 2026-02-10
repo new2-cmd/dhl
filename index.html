@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" href="./images/icon.png">
+    <title>DHL-Clone</title>
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <div class="top-links">
+                <a href="#">Private Customers</a>
+                <a href="#">Business Customers</a>
+            </div>
+            <a href="#"><img src="./images/dhl-logo.svg" alt=""></a>
+           <div class="ul-container">
+                <ul>
+                    <li title="Click for more Infos" onclick="shipping()"><a href="#">Shipping parcels</a></li>
+                    <li onclick="delivery()"><a href="#">Delivery services</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><i class="fa-solid fa-user"></i><a href="#">Login</a></li>
+                    <li><a href="#">EN</a><i class="fa-solid fa-chevron-down"></i></li>
+                </ul>
+                <div id="shipping-container">
+                    <!-- first one  -->
+                    <div>
+                        <h2>Online franking</h2>
+                       <li><a href="#">Parcel Postage</a></li>
+                       <li><a href="#">Economy Sets</a></li>
+                       <li><a href="#">Pick-up order</a></li>
+                       <li><a href="#">How it works</a></li>
+                    </div>
+                    <!-- second one -->
+                    <div>
+                        <h2>Shipping nationwide</h2>
+                        <li><a href="#">Domestic prices</a></li>
+                        <li><a href="#">Shipments up to 2 kg</a></li>
+                        <li><a href="#">Päckchen</a></li>
+                        <li><a href="#">Paket</a></li>
+                    </div>
+                    <!-- third one -->
+                    <div>
+                        <h2>Shipping worldwide</h2>
+                        <li><a href="#">International prices</a></li>
+                        <li><a href="#">Päckchen</a></li>
+                        <li><a href="#">Paket</a></li>
+                        <li><a href="#">ExpressEasy</a></li>
+                    </div>
+                    <!-- fourth one  -->
+                    <div>
+                        <h2>Dropping off parcels</h2>
+                        <li><a href="#">DHL Finder</a></li>
+                        <li><a href="#">Scheduled Pick-up</a></li>
+                        <li><a href="#">Unscheduled pick-up</a></li>
+                        <li><a href="#">Packaging correctly</a></li>
+                    </div>
+                    <a class="exit" href="./index.html">Back to main</a>
+                </div>
+
+
+                <div id="delivery-container">
+                    <!-- first one  -->
+                    <div>
+                        <h2>Shipment tracking</h2>
+                       <li><a href="#">Parcel notification</a></li>
+                       <li><a href="#">Delivery notification</a></li>
+                       <li><a href="#">Live tracking</a></li>                         
+                    </div>
+                    <!-- second one -->
+                    <div>
+                        <h2>Delivery at home</h2>
+                        <li><a href="#">Preferred location</a></li>
+                        <li><a href="#">Preferred neighbour</a></li>
+                        <li><a href="#">Preferred day</a></li>
+                    </div>
+                    <!-- third one -->
+                    <div>
+                        <h2>Your Pickup Location</h2>
+                        <li><a href="#">DHL Packstation</a></li>
+                        <li><a href="#">Postal outlet/Parcelshop</a></li>
+                        <li><a href="#">Parcel redirection</a></li>
+                    </div>
+                    <a class="exit" href="./index.html">Back to main</a>
+            </div>
+        </div>
+    </header>
+    <section class="upper">
+        <article class="main-upper">
+            <div class="bg-form">
+                <div class="bg">
+                    <div class="bg-text">
+                        <p>DELIVERED JUST AS YOU WISH</p>
+                        <h1>DHL Preferred Delivery makes it happen</h1>
+                        <button>Register now</button>
+                    </div>
+                </div>
+                
+            <br> <br>
+            <br> <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Shipment</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* Banner */
+.track-banner{
+    background:url('asdf.webp') center/cover;
+    padding:60px 20px;
+    position:relative;
+}
+
+.track-banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+}
+
+.track-content{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.track-title{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* Form */
+.track-form-box{
+    display:flex;
+    background:#e6e6e6;
+    border-radius:8px;
+    overflow:hidden;
+    border:2px solid white;
+}
+
+.track-form-box input{
+    flex:1;
+    padding:18px;
+    border:none;
+    font-size:16px;
+    background:#e6e6e6;
+    outline:none;
+}
+
+.track-form-box button{
+    background:#d40511;
+    color:white;
+    border:none;
+    padding:0 40px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Spinner Overlay */
+.spinner-box{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.spinner{
+    width:70px;
+    height:70px;
+    border:6px solid #eee;
+    border-top:6px solid #d40511;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{ transform:rotate(360deg); }
+}
+
+/* Error */
+#error{
+    color:#ffdddd;
+    margin-top:15px;
+    font-size:18px;
+    display:none;
+}
+
+/* Mobile */
+@media(max-width:600px){
+.track-form-box{ flex-direction:column; }
+.track-form-box button{ width:100%; padding:15px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Spinner -->
+<div class="spinner-box" id="spinnerBox">
+    <div class="spinner"></div>
+</div>
+
+<section class="track-banner">
+<div class="track-content">
+
+<h2 class="track-title">Track Your Shipment</h2>
+
+<form id="trackForm" class="track-form-box">
+    <input type="search" id="trackInput" placeholder="Enter your tracking number(s)">
+    <button type="submit">Track</button>
+</form>
+
+<div id="error">Invalid Tracking Number</div>
+
+</div>
+</section>
+
+<script>
+document.getElementById("trackForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let value = document.getElementById("trackInput").value.trim();
+    let spinner = document.getElementById("spinnerBox");
+    let error = document.getElementById("error");
+
+    error.style.display = "none";
+
+    /* Spinner always start */
+    spinner.style.display = "flex";
+
+    setTimeout(function(){
+
+        spinner.style.display = "none";
+
+        if(value === "784512963"){
+            window.location.href = "next.html";
+        }else{
+            error.style.display = "block";
+        }
+
+    },5000);
+
+});
+</script>
+
+</body>
+</html>
+
+            <br> <br>
+            <!-- Text -->
+            <div class="middle-text">
+                <h1>Never miss a parcel again</h1>
+
+                
+
+                <p>With DHL, you simply decide yourself how you want to send and receive your parcels.</p>
+            </div>
+
+            <!-- Three pics -->
+            <div class="three-pics">
+                <!-- first one -->
+                <div>
+                    <a href="#"><img src="./images/1.jpg" alt=""></a>
+                    <div>
+                        <h2>DHL preferred location <i class="fa-solid fa-angle-right"></i></h2>
+                        <p>Select a storage location on your property and have your parcels delivered there.</p>
+                        <button>Read more</button>
+                    </div>          
+                  </div>
+                  <!-- second one -->
+                <div>
+                    <a href="#"><img src="./images/2.png" alt=""></a>
+                   <div>
+                        <h2>DHL Packstation<i class="fa-solid fa-angle-right"></i></h2>
+                        <p>Send and receive your parcels at a DHL Packstation always nearby, regardless of opening hours.</p>
+                        <button>Read more</button>
+                   </div>          
+                </div>
+                <!-- third one -->
+                <div>
+                    <a href="#"><img src="./images/3.jpg" alt=""></a>
+                   <div>
+                        <h2>Receive parcel notification<i class="fa-solid fa-angle-right"></i></h2>
+                        <p>Get notified by e-mail when your package will be delivered, and make flexible changes to the delivery.</p>
+                        <button>Read more</button>
+                   </div>          
+                </div>
+            </div>
+
+            <div class="hr-links">
+                <!-- first-one -->
+                <div>
+                    
+                    <a href="#"><p>Current information and notes</p><i class="fa-solid fa-angle-right"></i></a>
+                    
+                </div>
+                <!-- second one -->
+                <div>
+                    
+                    <a href="#"><p>Save on shipping costs starting from 10 parcels - with DHL Economy Sets</p><i class="fa-solid fa-angle-right"></i></a>
+                    
+                </div>
+                <!-- the third one -->
+                <div>
+                    
+                    <a href="#"><p>Calculate an individual offer for business customers</p><i class="fa-solid fa-angle-right"></i></a>
+                    
+                </div>
+            </div>
+        </article>
+
+        <!-- middle -->
+        <div class="middle">
+            <div class="middle-container">
+                <div class="middle-text">
+                    <h1>DHL locations near you</h1>
+                <p>Thanks to the many DHL locations, you will always find a place nearby where you can conveniently pick up and send your parcels.</p>
+                <p><b>Tip:</b>You can simply give your parcels and returns to your DHL delivery agent free of charge.</p>
+                </div>
+                <div class="two-pics">
+                    <!-- first one -->
+                    <div>
+                        <a href="#"><img src="./images/4.png" alt=""></a>
+                        <div>
+                            <h1>Find location</h1>
+                            <form action="">
+                                <input placeholder="Put in address, zip-code or place" type="text" name="text" id="2">
+                                <button><i class="fa-solid fa-angle-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- second one -->
+                    <div>
+                        <a href="#"><img src="./images/5.jpg" alt=""></a>
+                        <div>
+                            <h1>Frank your packages with your mobile phone</h1>
+                            <p>Pay online and have your shipping label printed out conveniently by DHL.</p>
+                            <p>Read more<i class="fa-solid fa-angle-right"></i> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="down">
+        <!-- top section -->
+        <article class="top-section">
+            <div class="top-section-container">
+                <h1>Customized products and solutions for business customers</h1>
+                <div class="container">
+                    <!-- first-one -->
+                    <div>
+                        <h2>PARCEL SHIPPING<i class="fa-solid fa-angle-right"></i></h2>
+                        <p>Find the perfect parcel service for your business! Profit from pricing tailored to your individual requirements and business processes.</p>
+                    </div>
+                    <!-- second-one -->
+                    <div>
+                        <h2>EXPRESS DISPATCH <i class="fa-solid fa-angle-right"></i> </h2>
+                        <p>For your time-critical items: delivery with a time option or by the close of business - quickly and reliably to over 220 countries and territories.</p>
+                    </div>
+                    <!-- third-one -->
+                    <div>
+                        <h2>LOGISTICS SOLUTIONS<i class="fa-solid fa-angle-right"></i></h2>
+                        <p>We send your goods to anywhere in the world - by air freight, ocean freight, road or rail.</p>
+                    </div>
+                </div>
+                <button>Calculate an individual offer for business customers</button>
+            </div>
+        </article>
+        <!-- bottom section -->
+        <section class="bottom-section">
+            <div class="bottom-section-container">
+                <!-- first one -->
+                <div>
+                    <h1>Shipping parcels</h1>
+                    <hr>
+                    <a href="#">
+                        <p>Online Franking</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Domestic prices</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Products and services</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Shipping parcels</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Prices for frequent shippers</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                </div>
+                <!-- second one -->
+                <div>
+                    <h1>Delivery Services</h1>
+                    <hr>
+                    <a href="#">
+                        <p>Track and Trace</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Parcel notification</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Packstation</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Preferred location</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Customer account</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                </div>
+                <!-- third one -->
+                <div>
+                    <h1>FAQ</h1>
+                    <hr>
+                    <a href="#">
+                        <p>Where is my parcel?</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>What does my shipment status mean?</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                    <a href="#">
+                        <p>Customer service</p>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <footer>
+        <div class="footer-top">
+            <!-- first-col -->
+            <div>
+                <h1>Private Customers</h1>
+                <a href="#">Prices</a>
+                <a href="#">Shipping parcels</a>
+                <a href="#">DHL delivery services</a>
+                <a href="#">DHL customer account</a>
+                <a href="#">Customer service</a>
+                <a href="#">Post & DHL App</a>
+            </div>
+            <!-- second-col -->
+            <div>
+                <h1>Business customer</h1>
+                <a href="#">Paket</a>
+                <a href="#">Express</a>
+                <a href="#">Logistics</a>
+                <a href="#">Contact</a>
+                <a href="#">Become a customer</a>
+                <a href="#">DHL.com</a>
+            </div>
+            <!-- third-col -->
+            <div>
+                <h1>Company</h1>
+                <a href="#">About us</a>
+                <a href="#">Deutsche Post DHL Group</a>
+                <a href="#">Career</a>
+                <a href="#">Media</a>
+                <a href="#">Investors</a>
+                <a href="#">Sustainability</a>
+            </div>
+            <!-- fourth-col -->
+            <div>
+                <h1>Social</h1>
+                <div class="footer-social">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-xing"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-hr">
+            <hr>
+        </div>
+        <div class="last-footer">
+            <h1>Deutsche Post DHL Group</h1>
+            <div class="footer-links">
+                <a href="#">Important information</a>
+                <a href="#">Legal Notice</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Data Protection</a>
+                <a href="#">Constent Settings</a>
+            </div>
+            <h2>2026 © DHL Paket GmbH - All rights reserved.</h2>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

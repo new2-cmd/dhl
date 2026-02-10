@@ -1,0 +1,353 @@
+@media only screen and (max-width:800px) {
+    header{
+        .main-header{
+            width: 100%;
+            margin: 0;
+            .top-links{
+                width: 45vw;
+                a{
+                    font-size: $mobile-fs;
+                    width: 50%;
+                   
+                }
+            }
+            a{
+                width: 16vw;
+                margin-left: 2%;
+            }
+            // nav ===========
+
+            .ul-container{
+                ul{
+                    width: 100%;
+                    li{
+                        width: 23%;
+                       
+                        a{
+                            font-size: $mobile-fs;
+                        }
+                        i{
+                            font-size: $mobile-i;
+                        }
+                       
+                    }
+                }
+
+                #shipping-container,#delivery-container{
+                    flex-wrap: wrap;
+                    position: fixed;
+                    padding-left: 4%;
+                    padding-bottom: 7%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 70%;
+                    overflow: scroll;
+                   transition: 2s;
+                   transform: translateX(-100%);
+                   box-shadow: 150px 0 140px rgba(0, 0, 0, 0.651);
+                   
+                    div{
+                        width: 100%;
+                        h2{
+                            font-size: $mobile-title-h1;
+                        }
+                        li{
+                            a{
+                                font-size: $mobile-title-p;
+
+                            }
+                        }
+                    }
+                    .exit{
+                        display: block;
+                        border: 0.2vw red solid;
+                        border-radius: 10px;
+                        padding: 2%;
+                        height: 6vw;
+                        width: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        font-size: $mobile-title-h1;
+                        color: black;
+                        margin: 0 auto;
+                        animation: back 1s infinite alternate;
+                        @keyframes back {
+                            from{
+                                box-shadow: 0 0 0 red;
+                            }
+                            to{
+                                box-shadow: 0 0 20px red;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+       
+    }
+
+    // ================= BG =============
+    .upper{
+        .main-upper{
+            width: 100%;
+            margin: 0;
+            .bg-form{
+                .bg{
+                    height: 30vw;
+                    .bg-text{
+                        p{
+                            font-size: $mobile-title-p;
+                        }
+                        h1{
+                            font-size: $mobile-title-h1;
+                        }
+                        button{
+                            font-size: $mobile-fs;
+                            width: 35%;
+                        }
+                    }
+                }
+
+                // Form ==============
+                .form-container{
+                    p{
+                        font-size: $mobile-fs;
+                    }
+                    form{
+                        width: 60%;
+                        height: 4vw;
+                        input{
+                            
+                            font-size: $mobile-fs;
+                            &::placeholder{
+                                font-size: $mobile-fs;
+                            }
+                        }
+                        button{
+                            width: 20%;
+                            font-size: $mobile-fs;
+                            i{
+                                font-size: $mobile-i;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Middle-text ======================
+            .middle-text{
+                h1{
+                    font-size: $mobile-title-h1
+                }
+                p{
+                    font-size: $mobile-title-p;
+                }
+            }
+
+            // Three pics ==================
+            .three-pics{
+                width: 90%;
+                margin: 0 auto;
+                flex-wrap: wrap;
+                div{
+                    width: 100%;
+                    margin-bottom: 6%;
+                    a{
+                        img{
+                            border-bottom: 0.5vw red solid;
+                        }
+                    }
+                    div{
+                        height: 20vw;
+
+                        h2{
+                            font-size: calc($mobile-fs + 0.5vw);
+                            margin-bottom: 5%;
+                            i{
+                                font-size: $mobile-i;
+                            }
+                        }
+                        p{
+                            font-size: $mobile-fs;
+                            margin-bottom: 5%;
+
+                        }
+                        button{
+                            font-size: $mobile-fs;
+                            padding: 3% 0;
+                        }
+                    }
+                }
+            }
+            // HR LINKS =====================
+            .hr-links{
+                width: 90%;
+                margin: 10% auto;
+                flex-wrap: wrap;
+                div{
+                    width: 100%;
+                    margin-bottom: 5%;
+                    a{
+                        
+                        p{
+                            font-size: $mobile-fs;
+                        }
+                        i{
+                            font-size: $mobile-i;
+                        }
+                    }
+                }
+            }
+        }
+
+        // =============== Middle ================
+        .middle{
+            .middle-container{
+                width: 90%;
+                .middle-text{
+                    h1{
+                        font-size: $mobile-title-h1;
+                    }
+                    p{
+                        font-size: $mobile-title-p;
+                    }
+                }
+                .two-pics{
+                    width: 90%;
+                    margin: 5% auto;
+                    div{
+                        width: 100%;
+                        margin-bottom: 5%;
+                        div{
+                            
+                            form{
+                                height: 5vw;
+                                input{
+                                    font-size: $mobile-fs;
+                                }
+                                button{
+                                    i{
+                                        font-size: $mobile-i;
+                                    }
+                                }
+                            }
+                            h1{
+                                font-size: $mobile-fs;
+                            }
+                            p{
+                                font-size: $mobile-fs;
+                                i{
+                                    font-size: $mobile-i;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ================ Down section ===============
+    .down{
+        .top-section{
+            .top-section-container{
+                width: 90%;
+                h1{
+                    font-size: $mobile-title-h1;
+                }
+                .container{
+                    width: 90%;
+                    flex-wrap: wrap;
+                    div{
+                        width: 100%;
+                        margin-bottom: 5%;
+                        h2{
+                            font-size: calc($mobile-fs + 0.5vw);
+                            i{
+                                font-size: $mobile-fs
+                            }
+                        }
+                        p{
+                            font-size: $mobile-fs;
+                        }
+
+                    }
+                }
+                button{
+                    font-size: $mobile-fs;
+                    width: 70%;
+                    padding: 3% 0;
+                }
+            }
+        }
+
+        // bottom section ==================
+        .bottom-section{
+            .bottom-section-container{
+                width: 90%;
+                div{
+                    h1{
+                        font-size: $mobile-title-p;
+                    }
+                    a{
+                        margin-bottom: 5%;
+
+                        p{
+                            font-size: $mobile-fs;
+                        }
+                        i{
+                            font-size: $mobile-i;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ======================= FOOTER =========================
+    footer{
+        .footer-top{
+            width: 90%;
+            div{
+                h1{
+                    font-size: $mobile-title-p;
+                }
+                a{
+                    font-size: $mobile-fs;
+                    margin-bottom: 5%;
+
+                }
+
+                .footer-social{
+                    i{
+                        font-size: $mobile-fs;
+                    }
+                }
+            }
+        }
+
+        // last footer ===========
+        .last-footer{
+            width: 90%;
+            h1{
+                font-size: $mobile-fs;
+            }
+            .footer-links{
+                a{
+                    font-size: calc($mobile-fs - 0.3vw);
+                }
+
+            }
+            h2{
+                font-size: 1.5vw;
+            }
+        }
+    }
+      
+}

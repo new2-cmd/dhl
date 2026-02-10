@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHL Smart Tracking Pro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#fff5cc,#f4f4f4);
+padding:15px;
+}
+
+.container{
+width:100%;
+max-width:1100px;
+margin:auto;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* HEADER */
+.header{
+background:linear-gradient(90deg,#ffcc00,#ffd633);
+padding:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+}
+
+.header h1{
+color:#d40511;
+font-size:clamp(20px,3vw,30px);
+}
+
+.track-box{
+background:#fff;
+padding:8px 18px;
+border-radius:30px;
+font-weight:600;
+font-size:clamp(12px,2vw,15px);
+}
+
+/* BARCODE */
+.barcode{
+width:220px;
+height:45px;
+margin-top:8px;
+background:repeating-linear-gradient(
+90deg,
+#000,
+#000 2px,
+#fff 2px,
+#fff 4px
+);
+border-radius:4px;
+}
+
+/* SECTION */
+.section{
+padding:clamp(18px,4vw,30px);
+border-bottom:1px solid #eee;
+}
+
+.section h2{
+font-size:clamp(18px,2.5vw,24px);
+margin-bottom:15px;
+}
+
+/* STATUS */
+.status-badge{
+display:inline-block;
+padding:10px 20px;
+border-radius:30px;
+font-weight:600;
+background:#e6ffe6;
+color:#0a7d00;
+margin-bottom:15px;
+font-size:clamp(13px,2vw,16px);
+}
+
+.progress{
+height:12px;
+background:#eee;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:100%;
+width:55%;
+background:linear-gradient(90deg,#ffcc00,#d40511);
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fafafa;
+padding:20px;
+border-radius:12px;
+border:1px solid #eee;
+font-size:clamp(13px,2vw,15px);
+}
+
+.card strong{
+display:block;
+margin-bottom:8px;
+color:#d40511;
+}
+
+/* MAP */
+.map{
+width:100%;
+height:clamp(250px,45vw,350px);
+border-radius:15px;
+border:none;
+}
+
+/* TIMELINE */
+.step{
+background:#fffbea;
+padding:15px;
+margin-bottom:12px;
+border-left:5px solid #ffcc00;
+border-radius:10px;
+font-size:clamp(13px,2vw,15px);
+}
+
+/* SMALL MOBILE */
+@media(max-width:480px){
+body{ padding:8px; }
+.header{ padding:15px; }
+.section{ padding:15px; }
+.barcode{ width:100%; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+<div>
+<h1>DHL EXPRESS</h1>
+<div class="track-box">
+Tracking ID: 784512963
+<div class="barcode"></div>
+</div>
+</div>
+</div>
+
+<!-- STATUS -->
+<div class="section">
+<h2>Shipment Status</h2>
+<div class="status-badge">✈ In Transit</div>
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+</div>
+
+<!-- SHIPMENT DETAILS -->
+<div class="section">
+<h2>Shipment Details</h2>
+
+<div class="grid">
+
+<div class="card">
+<strong>Sender</strong>
++1 606 399 0163<br>
+Sardar Jaghmohan Singh<br>
+EDEN FOOD COMPANY<br>
+Toronto, Canada
+</div>
+
+<div class="card">
+<strong>Receiver</strong>
+Gauriputra Marga, Kathmandu 32<br>
+Pepsicola, Nepal<br>
++977 9856038369<br>
++977 9846766783
+</div>
+
+<div class="card">
+<strong>Order Amount</strong>
+$230 USD<br>
+Weight: 2 KG<br>
+Service: Express Worldwide<br>
+Payment: ✅ Paid by Sender
+</div>
+
+</div>
+</div>
+
+<!-- PARCEL CONTENT -->
+<div class="section">
+<h2>Parcel Contents</h2>
+
+<div class="grid">
+
+<div class="card">
+<strong>Content Type</strong>
+Important Personal & Official Documents
+</div>
+
+<div class="card">
+<strong>Documents Included</strong>
+Passport<br>
+Visa Documents<br>
+Personal Identification Documents<br>
+Commercial Invoice<br>
+Company Agreement Papers
+</div>
+
+<div class="card">
+<strong>Parcel Security</strong>
+Sealed DHL Security Pack<br>
+Tamper Protected Envelope<br>
+High Priority Document Shipment
+</div>
+
+</div>
+</div>
+
+<!-- MAP -->
+<div class="section">
+<h2>Sender Location</h2>
+<iframe class="map"
+src="https://maps.google.com/maps?q=Toronto%20Canada&t=&z=6&ie=UTF8&iwloc=&output=embed">
+</iframe>
+</div>
+
+<!-- TRACKING HISTORY -->
+<div class="section">
+<h2>Tracking History</h2>
+<div class="step">Toronto — Shipment Picked Up</div>
+<div class="step">Canada Hub — Departed Facility</div>
+<div class="step">Dubai — Transit Hub</div>
+<div class="step">Kathmandu — Arrived Destination Country</div>
+</div>
+
+</div>
+
+</body>
+</html>
